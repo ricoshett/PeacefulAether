@@ -1,0 +1,3 @@
+displayName = Peaceful Aether
+author = Ricoshet
+version = 0.1

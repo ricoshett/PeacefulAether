@@ -1,0 +1,10 @@
+Configs: {
+	PeacefulAetherConfig: {
+		DisplayName: Peaceful Aether Config
+
+		DisableLifeRegeneration: {
+			Label: Отключить регенерацию здоровья
+			Tooltip: ""
+		}
+	}
+}
