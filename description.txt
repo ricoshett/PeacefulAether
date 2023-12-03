@@ -1,11 +1,11 @@
 Peaceful Aether is a mod that makes the aether (the shimmer biome) truly peaceful
 
-When the player inside the biome:
+When the player inside the biome (all the properties are toggleable in the config):
 [list]
-    [*] No mobs can spawn
-    [*] Player can't take damage
-    [*] Player can't damage anyone (including target dummies)
-    [*] Player's life regeneration is disabled (can be turned off in the mod's config)
+    [*] No enemies can spawn (true by default)
+    [*] Player can't take any damage (false by default)
+    [*] Player can't damage anyone including target dummies (false by default)
+    [*] Player's life regeneration is disabled (false by default)
 [/list]
 
 Author of the idea is @esoji

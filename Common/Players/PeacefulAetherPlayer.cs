@@ -6,10 +6,15 @@ using PeacefulAether;
 namespace PeacefulAether.Common.Players;
 class PeacefulAetherPlayer : ModPlayer
 {
-    private bool isLifeRegenDisabled = ModContent.GetInstance<PeacefulAetherConfig>().DisableLifeRegeneration;
-    public override void UpdateLifeRegen() => Player.lifeRegen *= isLifeRegenDisabled && Player.ZoneShimmer ? 0 : 1;
-    public override void ModifyWeaponDamage(Item item, ref StatModifier damage) => damage *= Player.ZoneShimmer ? 0 : 1;
-    public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable) => Player.ZoneShimmer;
-    public override void NaturalLifeRegen(ref float regen) => regen = Player.ZoneShimmer ? 0 : regen;
-    public override bool CanHitNPC(NPC target) => !Player.ZoneShimmer;
+    public override void UpdateLifeRegen() => Player.lifeRegen *= ModContent.GetInstance<PeacefulAetherConfig>().DisableLifeRegeneration && Player.ZoneShimmer ? 0 : 1;
+    public override void NaturalLifeRegen(ref float regen) => regen = ModContent.GetInstance<PeacefulAetherConfig>().DisableLifeRegeneration && Player.ZoneShimmer ? 0 : regen;
+    public override bool ImmuneTo(PlayerDeathReason damageSource, int cooldownCounter, bool dodgeable) => ModContent.GetInstance<PeacefulAetherConfig>().DisableTakingDamage && Player.ZoneShimmer;
+    public override bool CanHitNPC(NPC target)
+	{
+		if (!ModContent.GetInstance<PeacefulAetherConfig>().DisableDealingDamage)
+		{
+			return true;
+		}
+		return ModContent.GetInstance<PeacefulAetherConfig>().DisableDealingDamage && !Player.ZoneShimmer;
+	}
 }

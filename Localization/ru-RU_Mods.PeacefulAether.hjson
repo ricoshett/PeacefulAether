@@ -1,10 +1,25 @@
 Configs: {
 	PeacefulAetherConfig: {
-		DisplayName: Peaceful Aether Config
+		DisplayName: Конфиг Peaceful Aether
 
 		DisableLifeRegeneration: {
 			Label: Отключить регенерацию здоровья
 			Tooltip: ""
+		}
+
+		DisableMobSpawn: {
+			Tooltip: ""
+			Label: Отключить появление противников
+		}
+
+		DisableDealingDamage: {
+			Tooltip: ""
+			Label: Отключить возможность наносить урон
+		}
+
+		DisableTakingDamage: {
+			Tooltip: ""
+			Label: Отключить возможность получать урон
 		}
 	}
 }

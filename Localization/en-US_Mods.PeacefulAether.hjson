@@ -6,5 +6,20 @@ Configs: {
 			Label: Disable Life Regeneration
 			Tooltip: ""
 		}
+
+		DisableMobSpawn: {
+			Tooltip: ""
+			Label: Disable Mob Spawn
+		}
+
+		DisableDealingDamage: {
+			Tooltip: ""
+			Label: Disable Dealing Damage
+		}
+
+		DisableTakingDamage: {
+			Tooltip: ""
+			Label: Disable Taking Damage
+		}
 	}
 }
